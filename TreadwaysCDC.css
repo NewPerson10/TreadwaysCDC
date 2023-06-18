@@ -1,0 +1,228 @@
+@media screen and  (min-width: 100px){
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    h1{
+      padding-top: 50px;
+      width: 135%;
+      text-align: center;
+      padding-bottom: 70px;
+    }
+  
+    #menubtn{
+      width: 100px;
+      height: 100px;
+      background: #4ea0e47e;
+      text-align: center;
+      position: fixed;
+      right: 30px;
+      top: 5vh;
+      border-radius: 3px;
+      z-index: 4;
+      cursor: pointer;
+      border-radius: 20px;
+  }
+  #menubtn img{
+      width: 60px;
+      margin-top: 25px;
+  }
+  
+  #SideNav{
+      width: 250px;
+      height: 340vh;
+      position: fixed;
+      right: -450px;
+      top: 0;
+      background: #357acee7;
+      z-index: 3;
+      transition: 0.5s;
+      text-align: left;
+      border-radius: 10px;
+  }
+  #SideNav nav ul{
+      padding-top: 150px;
+  }
+  
+  #SideNav nav ul li{
+      
+      list-style: none;
+      margin: 100px 40px;
+      
+  }
+  #SideNav nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 150%;
+      font-weight: bolder;
+      
+  }
+  
+  
+  
+    .image-card {
+      display: inline-block;
+      width: 120%;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .image-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+    }
+    .image-card h2 {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .image-card p {
+      margin-top: 5px;
+      text-align: center;
+    }
+  
+  
+    #anything-else{
+      position: absolute;
+      width: 140%;
+      text-align: center;
+      font-size: 150%;
+      margin-top: 100px;
+  }
+  .search1{
+      position: absolute;
+      height: 200px;
+      width: 100%;
+      top: 20vh;
+  
+  }
+  #search1-bar{
+      height: 30px;
+      width: 70%;
+      background-color: #5488e94b;
+      border: 1px solid black;
+      border-color: #4ea0e422;
+      border-radius: 40px;
+      font-size: 100%;
+      text-align: left;
+      padding: 5%;
+  }
+  #search1-button{
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      margin-top: 10px;
+      left: 70%;
+      background-color: #357ace00;
+      border: 1px solid black;
+      border-color: #357ace00;
+      z-index: 8;
+  }
+  #search1-button img{
+      width: 70px;
+      height: 70px;
+  }
+  #suggestions1 {
+      list-style-type: none;
+      background-color: #ffffff;
+      width: 70%;
+      margin-left: 60px;
+      padding-top: 15px;
+      margin-top: 5vh;
+      display: none;
+      border-radius: 20px;
+      text-decoration: none ;
+      z-index: 1;
+      position: absolute;
+  }
+  #suggestions1 li {
+      background-color: #0045bba7;
+      height: 100px;
+      width: 70%;
+      padding: 18px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-bottom:25px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      z-index: 99;
+  }
+  #suggestions1 li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 120%;
+      width: 200%;
+  }
+  
+  #suggestions1 li:hover {
+      background-color: #0045bb;
+  }
+  .search1-bar-active #suggestions1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      display: block; /* Show the suggestions box when search bar is active */
+  }
+  
+  
+  
+  #buttons{
+      position: absolute;
+      margin-top: 50vh;
+      width: 130%;
+      text-align: center;
+      font-size: 250%;
+      height: 1000px;
+      margin-left: 30px;
+  }
+  .navigation-button {
+      background-color: #5488e9a3;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 40px;
+      height: 70px;
+    }
+  
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  
+  
+    .socials{
+      width: 100%;
+      height: 500px;
+      margin-top: 20vh;
+      position: absolute;
+      border-radius: 20px;
+  }
+  .socials img{
+      float: center;
+      margin: 10px;
+      margin-right: 50px;
+      margin-top: 100px;
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      
+  }
+  .socials button{
+      background-color: #00000000;
+      border: 1px solid black;
+      border-color: #fff;
+  }
+  }

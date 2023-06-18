@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content="width = device-width, viewport-fit=cover">
+        <link rel="icon" href="images/photo-output (10).PNG" type="image/png">
+        <link rel = "stylesheet" href="TreadwaysCDC.css">
+    </head>
+<body>
+  
+        <h1> Community </h1>
+
+        <div id = "menubtn">
+            <img src="images/photo-output (3).PNG" id="menu">
+        </div>
+
+        <div id="SideNav">
+            <nav>
+                <ul>
+                    <li><a href="https://newperson10.github.io/LDAC-Home/"> WELCOME</a></li>
+                    <li><a href="#"> FEATURES</a></li>
+                    <li><a href="#"> SERVICES</a></li>
+                    <li><a href="#"> MEET US</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <script>
+            var menubtn=document.getElementById("menubtn")
+            var SideNav=document.getElementById("SideNav")
+            var menu=document.getElementById("menu")
+            SideNav.style.right ="-450px";
+        menubtn.onclick = function(){
+            if(SideNav.style.right =="-450px"){
+                SideNav.style.right = "0";
+                menu.src="images/x1.PNG";
+            }
+            else{
+                SideNav.style.right = "-450px";
+                menu.src="images/photo-output (3).PNG";
+            }
+        }
+        </script>
+
+        
+  <div class="image-card">
+    <img src="images/MexicanRoutes-Gastronomy-005.jpg" alt="Image 1">
+    <h2>Event 1</h2>
+    <p>Description of what was done in Image 1.</p>
+  </div>
+  
+  <div class="image-card">
+    <img src="images/background1.png" alt="Image 2">
+    <h2>Event 2</h2>
+    <p>Description of what was done in Image 2.</p>
+  </div>
+  
+  <div class="image-card">
+    <img src="images/grow.PNG" alt="Image 3">
+    <h2>Event 3</h2>
+    <p>Description of what was done in Image 3.</p>
+  </div>
+  
+  <!-- Add more image cards as needed -->
+
+
+
+  <section id="anything-else">
+    <p><h2>Looking For Something<br> else?</h2></p>
+
+    <div class="search1">  
+        <form id="search1Form" onsubmit="openPage(); return false;">
+            <input type="text" value="" id="search1-bar" placeholder="Search..." onkeyup="showSuggestions1()" onfocus= "showSuggestions()">
+            <ul id="suggestions1"></ul>
+            <button type="submit" id="search1-button" onclick="performSearch1()">
+                <img src="images/icons8-search-30.png" alt="search-icon">
+            </button>
+            <script>
+                var links1 = [
+                    { url: "https://newperson10.github.io/LDAC/", text: "Home" },
+                    { url: "https://newperson10.github.io/LDAC-Learn-More/", text: "Learn More" },
+                    { url: "https://example.com/example1", text: "Example 1" },
+                    { url: "https://example.com/example2", text: "Example 2" },
+                    { url: "https://example.com/example3", text: "Example 3" },
+                    { url: "https://newperson10.github.io/Jerk-Festival/", text: "Jerk Festival" },
+                    { url: "https://newperson10.github.io/LDAC-Concert/", text: "Our Powerful CDC's in Concert" },
+                    { url: "https://newperson10.github.io/Awards-Ceremony/", text: "Awards Ceremony"}
+                ];
+        
+                function showSuggestions1() {
+                    var typed = document.getElementById("search1-bar").value.trim();
+                    var suggestionsContainer = document.getElementById("suggestions1");
+        
+                    // Clear previous suggestions
+                    suggestionsContainer.innerHTML = "";
+        
+                    // Filter links based on the typed query
+                    var filteredLinks = links1.filter(function(link) {
+                        return link.text.toLowerCase().includes(typed.toLowerCase());
+                    });
+
+                    var searchContainer = document.querySelector('.search1');
+        
+                    // Display the filtered suggestions
+                    filteredLinks.forEach(function(link) {
+                        var li = document.createElement("li");
+                        var anchor = document.createElement("a");
+                        anchor.href = link.url;
+                        anchor.textContent = link.text;
+                        li.appendChild(anchor);
+                        suggestionsContainer.appendChild(li);
+                    });
+                 if (typed.length > 0 && document.activeElement === document.getElementById("search1-bar")) {
+                    searchContainer.classList.add('search1-bar-active');
+                    } else {
+                    searchContainer.classList.remove('search1-bar-active');
+                
+                    }
+                }
+        
+                function performSearch1() {
+                    var typed = document.getElementById("search1-bar").value.trim()
+
+                    // Redirect to the first matching link URL
+                    var matchingLink = links1.find(function(link) {
+                        return link.text.toLowerCase() === typed.toLowerCase();
+                    });
+        
+                    if (matchingLink) {
+                        window.open(matchingLink.url);
+                    }
+                }
+                     document.addEventListener('click', function(event) {
+                        var suggestionsContainer = document.getElementById("suggestions1");
+
+                     // Check if the click target is outside the search bar and suggestions container
+                       if (!event.target.closest('.search1') && !event.target.closest('#suggestions1')) {
+                       suggestionsContainer.innerHTML = "";
+                          }
+                         });
+
+
+                         function hideSuggestionsOnTouch1(event) {
+                            var suggestionsContainer = document.getElementById("suggestions1");
+                             var searchContainer = document.querySelector('.search1');
+
+                           // Check if the touch target is outside the search bar and suggestions container
+                            if (!event.target.closest('.search1') && !event.target.closest('#suggestions1')) {
+                            suggestionsContainer.innerHTML = "";
+                            searchContainer.classList.remove('search1-bar-active');
+                                }
+                            }
+
+                            document.addEventListener('click', hideSuggestionsOnTouch1);
+                            document.addEventListener('touchstart', hideSuggestionsOnTouch1);
+                            </script>
+                            </form>
+    </div>
+</section>
+
+<section id="buttons">
+    <div class="button-container">
+    <button class="navigation-button" onclick="window.location.href = 'page1.html';">Go to Page 1 and see more</button>
+    <button class="navigation-button" onclick="window.location.href = 'page2.html';">Go to Page 2</button>
+    <button class="navigation-button" onclick="window.location.href = 'page3.html';">Go to Page 3</button>
+    <button class="navigation-button" onclick="window.location.href = 'page1.html';">Go to Page 1</button>
+    <button class="navigation-button" onclick="window.location.href = 'page2.html';">Linstead Ackee and Jerk Festival</button>
+    <button class="navigation-button" onclick="window.location.href = 'page3.html';">Go to Page 3</button>
+    <button class="navigation-button" onclick="window.location.href = 'page1.html';">Go to Page 1</button>
+    <button class="navigation-button" onclick="window.location.href = 'page2.html';">Go to Page 2</button>
+    <button class="navigation-button" onclick="window.location.href = 'page3.html';">Go to Page 3</button>
+    </div>
+
+    <div class="socials"> 
+        <h5> STAY IN THE LOOP?</h5>
+        <button href="#"> <img src="images/facebook-app-symbol.png"> </button>
+        <button href="#"> <img src="images/instagram.png"> </button>
+        <button href="#"> <img src="images/share.png"> </button>
+    </div>
+    
+</section>
+</body>
+</html>
