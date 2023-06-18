@@ -130,8 +130,8 @@
   #suggestions1 {
       list-style-type: none;
       background-color: #ffffff;
-      width: 70%;
-      margin-left: 60px;
+      width: 50%;
+      margin-left: 120px;
       padding-top: 15px;
       margin-top: 5vh;
       display: none;
@@ -142,7 +142,7 @@
   }
   #suggestions1 li {
       background-color: #0045bba7;
-      height: 100px;
+      height: 60px;
       width: 70%;
       padding: 18px;
       cursor: pointer;
@@ -156,7 +156,7 @@
   #suggestions1 li a {
       color: #ffffff;
       text-decoration: none;
-      font-size: 120%;
+      font-size: 100%;
       width: 200%;
   }
   
